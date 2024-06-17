@@ -109,7 +109,7 @@ def prcreative(request):
     return render (request,'webagency/demo-web-agency-single-project-creative.html')
 
 def bloghtml(request):
-    return render(request,'demo-web-agency-blog.html')
+    return render(request,'webagency/demo-web-agency-blog.html')
 
 def testhtml(request):
     return render(request,'test.html')

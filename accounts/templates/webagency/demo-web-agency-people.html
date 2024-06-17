@@ -1,4 +1,7 @@
-﻿<!doctype html>
+﻿{% load static %}
+{% load bootstrap5 %} 
+
+<!doctype html>
 <html class="no-js" lang="en">
     <head>
         <title>Crafto - The Multipurpose HTML5 Template</title>
@@ -8,19 +11,19 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta name="description" content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 48+ ready demos.">
         <!-- favicon icon -->
-        <link rel="shortcut icon" href="images/favicon.png">
-        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+        <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon-57x57.png' %}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/apple-touch-icon-72x72.png' %}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/apple-touch-icon-114x114.png' %}">
         <!-- google fonts preconnect -->
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!-- style sheets and font icons  -->
-        <link rel="stylesheet" href="css/vendors.min.css"/>
-        <link rel="stylesheet" href="css/icon.min.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/responsive.css"/>
-        <link rel="stylesheet" href="demos/web-agency/web-agency.css" /> 
+        <link rel="stylesheet" href="{% static 'css/vendors.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/icon.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+        <link rel="stylesheet" href="{% static 'demos/web-agency/web-agency.css' %}" /> 
     </head>
     <body data-mobile-nav-style="classic" class="background-position-center-top" style="background-image: url(images/vertical-line-bg-small-medium-gray.svg)"> 
         <!-- start header -->
@@ -30,9 +33,9 @@
                 <div class="container-fluid">
                     <div class="col-auto col-lg-2 me-lg-0 me-auto">
                         <a class="navbar-brand" href="demo-web-agency.html">
-                            <img src="images/demo-web-agency-logo-black.png" data-at2x="images/demo-web-agency-logo-black@2x.png" alt="" class="default-logo">
-                            <img src="images/demo-web-agency-logo-black.png" data-at2x="images/demo-web-agency-logo-black@2x.png" alt="" class="alt-logo">
-                            <img src="images/demo-web-agency-logo-black.png" data-at2x="images/demo-web-agency-logo-black@2x.png" alt="" class="mobile-logo"> 
+                            <img src="{}{% static 'images/demo-web-agency-logo-black.png' %}" data-at2x="{% static 'images/demo-web-agency-logo-black@2x.png' %}" alt="" class="default-logo">
+                            <img src="{% static 'images/demo-web-agency-logo-black.png' %}" data-at2x="{% static 'images/demo-web-agency-logo-black@2x.png' %}" alt="" class="alt-logo">
+                            <img src="{% static 'images/demo-web-agency-logo-black.png' %}" data-at2x="{% static 'images/demo-web-agency-logo-black@2x.png' %}" alt="" class="mobile-logo"> 
                         </a>
                     </div>
                     <div class="col-auto col-lg-8 menu-order position-static">
@@ -44,14 +47,14 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> 
                             <ul class="navbar-nav"> 
-                                <li class="nav-item"><a href="demo-web-agency.html" class="nav-link">Home</a></li>
-                                <li class="nav-item"><a href="demo-web-agency-about.html" class="nav-link">Agency</a></li>
+                                <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">Agency</a></li>
                                 <li class="nav-item dropdown dropdown-with-icon">
-                                    <a href="demo-web-agency-expertise.html" class="nav-link">Expertise</a>
+                                    <a href="{% url 'expertise' %}" class="nav-link">Expertise</a>
                                     <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         <li>
-                                            <a href="demo-web-agency-services-details.html">
+                                            <a href="{% url 'details' %}">
                                                 <img src="https://via.placeholder.com/130x130" class="w-40px" alt=""/> 
                                                 <div class="submenu-icon-content">
                                                     <span>Web design</span>
@@ -59,7 +62,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="demo-web-agency-services-details.html">
+                                            <a href="{% url 'details' %}">
                                                 <img src="https://via.placeholder.com/130x130" class="w-40px" alt=""/> 
                                                 <div class="submenu-icon-content">
                                                     <span>Web development</span>
@@ -67,7 +70,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="demo-web-agency-services-details.html">
+                                            <a href="{% url 'details' %}">
                                                 <img src="https://via.placeholder.com/130x130" class="w-40px" alt=""/> 
                                                 <div class="submenu-icon-content">
                                                     <span>eCommerce solution</span>
@@ -75,7 +78,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="demo-web-agency-services-details.html">
+                                            <a href="{% url 'details' %}">
                                                 <img src="https://via.placeholder.com/130x130" class="w-40px" alt=""/> 
                                                 <div class="submenu-icon-content">
                                                     <span>Content writing</span>
@@ -123,12 +126,12 @@
         <!-- start section -->
         <section class="p-0 md-pt-50px position-relative">
             <div class="position-absolute left-minus-50px lg-left-minus-150px top-25 md-top-25px" data-bottom-top="transform: translateY(-80px)" data-top-bottom="transform: translateY(80px)">
-                <img src="images/demo-web-agency-people-02.png" alt="">
+                <img src="{% static 'images/demo-web-agency-people-02.png' %}" alt="">
             </div>
             <div class="container">
                 <div class="row align-items-end align-items-lg-center border-bottom border-color-dark-gray position-relative">
                     <div class="col-md-6 order-2 order-md-1 text-center">
-                        <img class="position-relative bottom-minus-1px" src="https://via.placeholder.com/522x570" alt="">
+                        <img class="position-relative bottom-minus-1px" src="{% static 'images/ppo.webp' %}" alt="">
                     </div>
                     <div class="col-lg-5 offset-lg-1 col-md-6 order-1 order-md-2 position-relative z-index-2 lg-mb-50px sm-mb-35px">
                         <div class="icon-with-text-style-08 mb-25px">
@@ -142,10 +145,10 @@
                             </div>
                         </div>
                         <h5 class="text-dark-gray lh-40 fw-400 mb-20px ls-minus-1px">You don't need a group of super stars, you need a team <span class="fw-600 text-decoration-line-bottom-medium">working together to bring</span> you better results you need team.</h5>
-                        <img src="images/demo-web-agency-people-05.png" alt="">
+                        <img src="{% static 'images/demo-web-agency-people-05.png' %}" alt="">
                         <div class="fs-18 text-dark-gray mt-5px"><span class="fw-600">Herman miller,</span> Co founder </div>
                     </div>
-                    <img src="images/demo-web-agency-people-06.png" class="position-absolute bottom-minus-15px right-0px w-auto" alt=""/>
+                    <img src="{% static 'images/demo-web-agency-people-06.png' %}" class="position-absolute bottom-minus-15px right-0px w-auto" alt=""/>
                 </div>
             </div>
         </section>
@@ -194,147 +197,36 @@
         <!-- end section -->
         <!-- start section -->
         <section>
+            
+        {% block content %}
             <div class="container"> 
                 <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2">
                     <!-- start team member item --> 
+                    {% for profile in profiles %}
                     <div class="col text-center team-style-05 mb-30px mt-3 lg-mt-0" data-bottom-top="transform: translateY(30px)" data-top-bottom="transform: translateY(-30px)">
                         <div class="position-relative mb-30px last-paragraph-no-margin border-radius-6px overflow-hidden">
-                            <img src="https://via.placeholder.com/600x756" alt="" />
+                            {% if profile.photo %}
+                            <img src="{{ profile.photo.url }}" width="120"/>
+                            {% endif %}
                             <div class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-40px lg-p-20px team-content bg-gradient-gray-light-dark-transparent">
                                 <div class="social-icon fs-18">
-                                    <a href="https://www.facebook.com/" target="_blank" class="text-white"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="https://www.twitter.com/" target="_blank" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-                                    <a href="http://www.dribbble.com" target="_blank" class="text-white"><i class="fa-brands fa-dribbble"></i></a>
+                                    <a href="https://www.facebook.com/" target="_blank" class="text-red"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/" target="_blank" class="text-red"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.twitter.com/" target="_blank" class="text-red"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="http://www.dribbble.com" target="_blank" class="text-red"><i class="fa-brands fa-dribbble"></i></a>
                                 </div>                                
                             </div>
                         </div>
-                        <div class="fw-600 text-dark-gray lh-22">Jeremy dupont</div>
-                        <span class="fs-16">Director</span>
+                        <div class="fw-600 text-dark-gray lh-22">{{ profile.user.username }}</div>
+                        <span class="fs-16">@{{ profile.user.username|lower }}</span>
                     </div>
-                    <!-- end team member item -->   
-                    <!-- start team member item --> 
-                    <div class="col text-center team-style-05 mb-30px" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
-                        <div class="position-relative mb-30px last-paragraph-no-margin border-radius-6px overflow-hidden">
-                            <img src="https://via.placeholder.com/600x756" alt="" />
-                            <div class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-40px lg-p-20px team-content bg-gradient-gray-light-dark-transparent">
-                                <div class="social-icon fs-18">
-                                    <a href="https://www.facebook.com/" target="_blank" class="text-white"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="https://www.twitter.com/" target="_blank" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-                                    <a href="http://www.dribbble.com" target="_blank" class="text-white"><i class="fa-brands fa-dribbble"></i></a>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="fw-600 text-dark-gray lh-22">Jessica dover</div>
-                        <span class="fs-16">Founder</span>
+                    {% endfor %}
                     </div>
-                    <!-- end team member item -->   
-                    <!-- start team member item --> 
-                    <div class="col text-center team-style-05 mb-30px mt-3 lg-mt-0" data-bottom-top="transform: translateY(30px)" data-top-bottom="transform: translateY(-30px)">
-                        <div class="position-relative mb-30px last-paragraph-no-margin border-radius-6px overflow-hidden">
-                            <img src="https://via.placeholder.com/600x756" alt="" />
-                            <div class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-40px lg-p-20px team-content bg-gradient-gray-light-dark-transparent">
-                                <div class="social-icon fs-18">
-                                    <a href="https://www.facebook.com/" target="_blank" class="text-white"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="https://www.twitter.com/" target="_blank" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-                                    <a href="http://www.dribbble.com" target="_blank" class="text-white"><i class="fa-brands fa-dribbble"></i></a>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="fw-600 text-dark-gray lh-22">Matthew taylor</div>
-                        <span class="fs-16">Designer</span>
-                    </div>
-                    <!-- end team member item -->   
-                    <!-- start team member item --> 
-                    <div class="col text-center team-style-05 mb-30px" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
-                        <div class="position-relative mb-30px last-paragraph-no-margin border-radius-6px overflow-hidden">
-                            <img src="https://via.placeholder.com/600x756" alt="" />
-                            <div class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-40px lg-p-20px team-content bg-gradient-gray-light-dark-transparent">
-                                <div class="social-icon fs-18">
-                                    <a href="https://www.facebook.com/" target="_blank" class="text-white"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="https://www.twitter.com/" target="_blank" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-                                    <a href="http://www.dribbble.com" target="_blank" class="text-white"><i class="fa-brands fa-dribbble"></i></a>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="fw-600 text-dark-gray lh-22">Johncy parker</div>
-                        <span class="fs-16">Writer</span>
-                    </div>
-                    <!-- end team member item -->
-                    <!-- start team member item --> 
-                    <div class="col text-center team-style-05 md-mb-30px" data-bottom-top="transform: translateY(30px)" data-top-bottom="transform: translateY(-30px)">
-                        <div class="position-relative mb-30px last-paragraph-no-margin border-radius-6px overflow-hidden">
-                            <img src="https://via.placeholder.com/600x756" alt="" />
-                            <div class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-40px lg-p-20px team-content bg-gradient-gray-light-dark-transparent">
-                                <div class="social-icon fs-18">
-                                    <a href="https://www.facebook.com/" target="_blank" class="text-white"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="https://www.twitter.com/" target="_blank" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-                                    <a href="http://www.dribbble.com" target="_blank" class="text-white"><i class="fa-brands fa-dribbble"></i></a>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="fw-600 text-dark-gray lh-22">Michal ruheen</div>
-                        <span class="fs-16">Executive</span>
-                    </div>
-                    <!-- end team member item -->
-                    <!-- start team member item --> 
-                    <div class="col text-center team-style-05 md-mb-30px" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
-                        <div class="position-relative mb-30px last-paragraph-no-margin border-radius-6px overflow-hidden">
-                            <img src="https://via.placeholder.com/600x756" alt="" />
-                            <div class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-40px lg-p-20px team-content bg-gradient-gray-light-dark-transparent">
-                                <div class="social-icon fs-18">
-                                    <a href="https://www.facebook.com/" target="_blank" class="text-white"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="https://www.twitter.com/" target="_blank" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-                                    <a href="http://www.dribbble.com" target="_blank" class="text-white"><i class="fa-brands fa-dribbble"></i></a>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="fw-600 text-dark-gray lh-22">Jeremy smith</div>
-                        <span class="fs-16">Officer</span>
-                    </div>
-                    <!-- end team member item -->
-                    <!-- start team member item --> 
-                    <div class="col text-center team-style-05 xs-mb-30px" data-bottom-top="transform: translateY(30px)" data-top-bottom="transform: translateY(-30px)">
-                        <div class="position-relative mb-30px last-paragraph-no-margin border-radius-6px overflow-hidden">
-                            <img src="https://via.placeholder.com/600x756" alt="" />
-                            <div class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-40px lg-p-20px team-content bg-gradient-gray-light-dark-transparent">
-                                <div class="social-icon fs-18">
-                                    <a href="https://www.facebook.com/" target="_blank" class="text-white"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="https://www.twitter.com/" target="_blank" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-                                    <a href="http://www.dribbble.com" target="_blank" class="text-white"><i class="fa-brands fa-dribbble"></i></a>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="fw-600 text-dark-gray lh-22">Herman miller</div>
-                        <span class="fs-16">Officer</span>
-                    </div>
-                    <!-- end team member item -->
-                    <!-- start team member item --> 
-                    <div class="col text-center team-style-05" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
-                        <div class="position-relative mb-30px last-paragraph-no-margin border-radius-6px overflow-hidden">
-                            <img src="https://via.placeholder.com/600x756" alt="" />
-                            <div class="w-100 h-100 d-flex flex-column justify-content-end align-items-center p-40px lg-p-20px team-content bg-gradient-gray-light-dark-transparent">
-                                <div class="social-icon fs-18">
-                                    <a href="https://www.facebook.com/" target="_blank" class="text-white"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="https://www.twitter.com/" target="_blank" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-                                    <a href="http://www.dribbble.com" target="_blank" class="text-white"><i class="fa-brands fa-dribbble"></i></a>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="fw-600 text-dark-gray lh-22">Bryan jonhson</div>
-                        <span class="fs-16">Executive</span>
-                    </div>
-                    <!-- end team member item -->
                 </div>
+                {% endblock content %}
             </div>
         </section>
+        
         <!-- end section -->
         <!-- start section -->
         <section class="pt-1 pb-0">
@@ -394,7 +286,7 @@
                         <div class="outside-box-right-5 sm-outside-box-right-0">
                             <div class="fs-350 xl-fs-250 lg-fs-200 md-fs-170 sm-fs-100 text-base-color fw-600 ls-minus-20px position-relative d-inline-block word-break-normal">together
                                 <div class="position-absolute left-minus-140px top-minus-140px z-index-9 xl-left-minus-110px top-minus-140px xl-top-minus-100px md-top-minus-90px z-index-9 xl-w-230px md-w-200px d-none d-md-block" data-anime='{ "translateY": [-15, 0], "scale": [0.5, 1], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                    <img src="images/demo-web-agency-05.png" class="animation-rotation" alt="">
+                                    <img src="{}images/demo-web-agency-05.png" class="animation-rotation" alt="">
                                     <div class="absolute-middle-center w-100 z-index-minus-1"><img src="images/demo-web-agency-04.png" alt=""></div> 
                                 </div>
                             </div>
